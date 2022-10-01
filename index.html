@@ -12,12 +12,16 @@
 				}
 
 				#container {
-						width: 80%;
-						height: 40vh;
+						width: 34%;
+						height: 27vh;
 						padding: 15px;
-						margin: 15px auto;
+						margin: 15px;
 						box-shadow: 5px 5px 15px #000;
 						border-radius: 5px;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						gap: 150px;
 				}
 
 				#btnGenerate {
@@ -43,10 +47,16 @@
 				#qr-code {
 					width: 30%;
 					height: 10vh;
-					margin: 25px auto;
-					padding: 50px;
 				}
 
+				p {
+					font-size: 2.5em;
+				}
+
+				select {
+					width: 150px;
+					height: 50px;
+				}
 		</style>
 
 	</head>
@@ -54,9 +64,20 @@
 	<body>
 		<div id="container">
 			<div id="qr-information">
-				<textarea cols="130" rows="13" id="qr-content" placeholder="QR content goes here ..." ></textarea>
+				<textarea cols="55" rows="7" id="qr-content" placeholder="QR content goes here ..." ></textarea>
 				<br>
 				<button type="submit" id="btnGenerate">Generate</button>
+			</div>
+
+			<div id="size-container">
+				<p><b>Size</b></p>
+					<select id="size">
+							<option selected>150x150</option>
+							<option>250x250</option>
+							<option>350x350</option>
+							<option>450x450</option>
+							<option>550x550</option>
+					</select>
 			</div>
 
 			<div id="qr-code">
